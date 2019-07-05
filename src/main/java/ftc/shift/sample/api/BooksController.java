@@ -32,7 +32,7 @@ public class BooksController {
           @RequestHeader("userId") String userId,
           @ApiParam(value = "Данные для новой книги (Название, автор, количество страниц, жанры)")
           @RequestBody Book book) {
-    Book result = service.createBook(userId, book);
+    var result = service.createBook(userId, book);
     return ResponseEntity.ok(result);
   }
 
@@ -43,7 +43,7 @@ public class BooksController {
           @RequestHeader("userId") String userId,
           @ApiParam(value = "Идентификатор книги")
           @PathVariable String bookId) {
-    Book book = service.provideBook(userId, bookId);
+    var book = service.provideBook(userId, bookId);
     return ResponseEntity.ok(book);
   }
 
@@ -76,7 +76,7 @@ public class BooksController {
   public ResponseEntity<Collection<Book>> listBooks(
           @ApiParam(value = "Идентификатор пользователя")
           @RequestHeader("userId") String userId) {
-    Collection<Book> books = service.provideBooks(userId);
+    var books = service.provideBooks(userId);
     return ResponseEntity.ok(books);
   }
 }
