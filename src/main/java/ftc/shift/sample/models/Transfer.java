@@ -1,11 +1,19 @@
 package ftc.shift.sample.models;
 
 public class Transfer {
-    int id;
-    String name;
+    private int id;
+    private String name;
 
     public Transfer(int id, String name) {
         this.id = id;
+        this.name = name;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public void setName(String name) {
         this.name = name;
     }
 
@@ -16,6 +24,4 @@ public class Transfer {
     public String getName() {
         return name;
     }
-
-
 }
