@@ -5,13 +5,13 @@ import ftc.shift.sample.models.MoveNote;
 import java.util.Collection;
 
 public interface MoveNoteRepository {
-    MoveNote fetchMoveNote(String moveId, String moveNoteId);
+    MoveNote fetchMoveNote(String userId, String moveId, String moveNoteId);
 
-    MoveNote updateMoveNote(String moveId, String moveNoteId, MoveNote moveNote);
+    MoveNote updateMoveNote(String userId, String moveId, String moveNoteId, MoveNote moveNote);
 
-    void deleteMoveNote(String moveId, String moveNoteId);
+    void deleteMoveNote(String userId, String moveId, String moveNoteId);
 
-    MoveNote createMoveNote(String moveId, MoveNote moveNote);
+    MoveNote createMoveNote(String userId, String moveId, MoveNote moveNote);
 
-    Collection<MoveNote> getAllMoveNotes(String userId);
+    Collection<MoveNote> getAllMoveNotes(String userId, String moveId);
 }

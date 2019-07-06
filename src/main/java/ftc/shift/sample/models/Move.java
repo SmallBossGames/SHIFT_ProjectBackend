@@ -5,15 +5,51 @@ import java.util.Collection;
 import java.util.Date;
 
 public class Move {
-    String id;
-    String travelId;
-    String fromPlace;
-    Date fromDate;
-    String toPlace;
-    Date toDate;
-    double distance;
-    int transferId;
-    BigDecimal money;
+    private String id;
+    private String travelId;
+    private String fromPlace;
+    private Date fromDate;
+    private String toPlace;
+    private Date toDate;
+    private double distance;
+    private int transferId;
+    private BigDecimal money;
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    public void setTravelId(String travelId) {
+        this.travelId = travelId;
+    }
+
+    public void setFromPlace(String fromPlace) {
+        this.fromPlace = fromPlace;
+    }
+
+    public void setFromDate(Date fromDate) {
+        this.fromDate = fromDate;
+    }
+
+    public void setToPlace(String toPlace) {
+        this.toPlace = toPlace;
+    }
+
+    public void setToDate(Date toDate) {
+        this.toDate = toDate;
+    }
+
+    public void setDistance(double distance) {
+        this.distance = distance;
+    }
+
+    public void setTransferId(int transferId) {
+        this.transferId = transferId;
+    }
+
+    public void setMoney(BigDecimal money) {
+        this.money = money;
+    }
 
     public String getId() {
         return id;

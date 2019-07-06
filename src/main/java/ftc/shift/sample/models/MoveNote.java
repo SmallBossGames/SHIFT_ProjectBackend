@@ -1,8 +1,11 @@
 package ftc.shift.sample.models;
 
 public class MoveNote {
-    String id;
-    String title;
+    private String id;
+    private String title;
+    private String text;
+
+    public MoveNote(){}
 
     public MoveNote(String id, String title, String text) {
         this.id = id;
@@ -10,7 +13,17 @@ public class MoveNote {
         this.text = text;
     }
 
-    String text;
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public void setText(String text) {
+        this.text = text;
+    }
 
     public String getId() {
         return id;
