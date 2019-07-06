@@ -11,8 +11,7 @@ import java.util.Collection;
 public class DatabaseTravelRepository implements TravelRepository {
     @Override
     public Travel fetchTravel(String userId, String travelId) {
-        var moves = new ArrayList<Move>();
-        return new Travel("hui", "zalupa", moves);
+        return new Travel("hui", "zalupa");
     }
 
     @Override
@@ -33,8 +32,8 @@ public class DatabaseTravelRepository implements TravelRepository {
     @Override
     public Collection<Travel> getAllTravels(String userId) {
         var temp = new ArrayList<Travel>();
-        temp.add(new Travel("hui", "zalupa", null));
-        temp.add(new Travel("hui2", "java sucks", null));
+        temp.add(new Travel("hui", "zalupa"));
+        temp.add(new Travel("hui2", "java sucks"));
         return temp;
     }
 }

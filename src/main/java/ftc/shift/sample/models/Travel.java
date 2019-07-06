@@ -5,14 +5,12 @@ import java.util.List;
 public class Travel {
     String id;
     String name;
-    List<Move> moves;
 
     public Travel() {}
 
-    public Travel(String id, String name, List<Move> moves) {
+    public Travel(String id, String name) {
         this.id = id;
         this.name = name;
-        this.moves = moves;
     }
 
     public void setId(String id) {
@@ -23,10 +21,6 @@ public class Travel {
         this.name = name;
     }
 
-    public void setMoves(List<Move> moves) {
-        this.moves = moves;
-    }
-
     public String getId() {
         return id;
     }
@@ -35,7 +29,4 @@ public class Travel {
         return name;
     }
 
-    public List<Move> getMoves() {
-        return moves;
-    }
 }

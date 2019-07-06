@@ -7,7 +7,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.Collection;
 
-//@Service
+@Service
 public class MoveService {
     private final MoveRepository moveRepository;
 

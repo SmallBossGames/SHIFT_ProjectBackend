@@ -15,8 +15,6 @@ public class Move {
     int transferId;
     BigDecimal money;
 
-    Collection<MoveNote> moveNotes;
-
     public String getId() {
         return id;
     }
@@ -53,11 +51,9 @@ public class Move {
         return money;
     }
 
-    public Collection<MoveNote> getMoveNotes() {
-        return moveNotes;
-    }
+    public Move(){ }
 
-    public Move(String id, String travelId, String fromPlace, Date fromDate, String toPlace, Date toDate, double distance, int transferId, BigDecimal money, Collection<MoveNote> moveNotes) {
+    public Move(String id, String travelId, String fromPlace, Date fromDate, String toPlace, Date toDate, double distance, int transferId, BigDecimal money) {
         this.id = id;
         this.travelId = travelId;
         this.fromPlace = fromPlace;
@@ -67,6 +63,5 @@ public class Move {
         this.distance = distance;
         this.transferId = transferId;
         this.money = money;
-        this.moveNotes = moveNotes;
     }
 }
