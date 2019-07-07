@@ -1,9 +1,9 @@
 package ftc.shift.sample.models;
 
 public class TravelNote {
-    String id;
-    String title;
-    String text;
+    private String id;
+    private String title;
+    private String text;
 
     public void setId(String id) {
         this.id = id;
