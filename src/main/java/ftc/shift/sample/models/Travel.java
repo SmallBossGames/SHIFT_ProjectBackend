@@ -28,5 +28,4 @@ public class Travel {
     public String getName() {
         return name;
     }
-
 }
