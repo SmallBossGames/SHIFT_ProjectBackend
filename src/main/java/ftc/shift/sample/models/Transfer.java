@@ -4,6 +4,8 @@ public class Transfer {
     private int id;
     private String name;
 
+    public Transfer(){}
+
     public Transfer(int id, String name) {
         this.id = id;
         this.name = name;

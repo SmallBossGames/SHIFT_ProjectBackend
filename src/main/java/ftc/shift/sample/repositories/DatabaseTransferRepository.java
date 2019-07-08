@@ -1,6 +1,11 @@
 package ftc.shift.sample.repositories;
 
+import ftc.shift.sample.exception.NotFoundException;
 import ftc.shift.sample.models.Transfer;
+import ftc.shift.sample.repositories.extractors.TransferExtractor;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.jdbc.core.namedparam.MapSqlParameterSource;
+import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
 import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;
@@ -8,9 +13,29 @@ import java.util.Collection;
 
 @Repository
 public class DatabaseTransferRepository implements TransferRepository {
+
+    private final NamedParameterJdbcTemplate jdbcTemplate;
+    private final TransferExtractor extractor;
+
+    @Autowired
+    public DatabaseTransferRepository(NamedParameterJdbcTemplate jdbcTemplate, TransferExtractor extractor) {
+        this.jdbcTemplate = jdbcTemplate;
+        this.extractor = extractor;
+    }
+
     @Override
     public Transfer fetchTransfer(String userId, int transferId) {
-        return new Transfer(10, "name");
+        var sql = "SELECT ID, NAME FROM TRANSFERS WHERE ID = :transferId";
+        var params = new MapSqlParameterSource()
+                .addValue("transferId", transferId);
+        var result = jdbcTemplate.query(sql, params, extractor);
+
+        if(result.isEmpty())
+        {
+            throw new NotFoundException();
+        }
+
+        return result.get(0);
     }
 
     @Override
@@ -30,8 +55,7 @@ public class DatabaseTransferRepository implements TransferRepository {
 
     @Override
     public Collection<Transfer> getAllTransfers(String userId) {
-        var temp = new ArrayList<Transfer>();
-        temp.add(new Transfer(10, "name"));
-        return temp;
+        var sql = "SELECT ID, NAME FROM TRANSFERS";
+        return jdbcTemplate.query(sql, extractor);
     }
 }
