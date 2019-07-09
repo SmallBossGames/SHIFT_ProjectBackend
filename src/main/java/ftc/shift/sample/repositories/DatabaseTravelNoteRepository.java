@@ -90,7 +90,7 @@ public class DatabaseTravelNoteRepository implements TravelNoteRepository {
 
     @Override
     public void deleteTravelNote(String userId, String travelId, String travelNoteId) {
-        final var sql = "DELETE FROM TRAVEL_NOTES WHERE ID = :travelNoteId AND TRAVEL_ID = :travelId";
+        var sql = "DELETE FROM TRAVEL_NOTES WHERE ID = :travelNoteId AND TRAVEL_ID = :travelId";
         var params = new MapSqlParameterSource()
                 .addValue("travelNoteId", travelNoteId)
                 .addValue("travelId", travelId);

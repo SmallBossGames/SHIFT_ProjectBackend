@@ -26,7 +26,7 @@ public class MoveNotesController {
     )
     {
         var result = service.createMoveNote(userId, moveId, moveNote);
-        return ResponseEntity.ok(moveNote);
+        return ResponseEntity.ok(result);
     }
 
     @GetMapping(MOVE_NOTE_PATH + "/{moveNoteId}")

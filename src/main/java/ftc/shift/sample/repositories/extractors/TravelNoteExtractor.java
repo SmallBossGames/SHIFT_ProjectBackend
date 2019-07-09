@@ -18,7 +18,7 @@ public class TravelNoteExtractor implements ResultSetExtractor<List<TravelNote>>
         var travelNotes = new HashMap<String, TravelNote>();
         while (rs.next())
         {
-            String id = rs.getString("ID");
+            var id = rs.getString("ID");
 
             if(!travelNotes.containsKey(id))
             {
