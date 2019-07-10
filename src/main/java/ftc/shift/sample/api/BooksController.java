@@ -20,21 +20,24 @@ import java.util.Collection;
 @Api(description = "Запросы для работы с книгами")
 public class BooksController {
 
-  private static final String BOOKS_PATH = "/api/v001/books";
+    private static final String BOOKS_PATH = "/api/v001/books";
+    private final BookService service;
 
-  @Autowired
-  private BookService service;
+    @Autowired
+    public BooksController(BookService service) {
+        this.service = service;
+    }
 
-  @PostMapping(BOOKS_PATH)
-  @ApiOperation(value = "Добавление новой книги")
-  public ResponseEntity<Book> createBook(
-          @ApiParam(value = "Идентификатор пользователя")
-          @RequestHeader("userId") String userId,
-          @ApiParam(value = "Данные для новой книги (Название, автор, количество страниц, жанры)")
-          @RequestBody Book book) {
-    var result = service.createBook(userId, book);
-    return ResponseEntity.ok(result);
-  }
+    @PostMapping(BOOKS_PATH)
+    @ApiOperation(value = "Добавление новой книги")
+    public ResponseEntity<Book> createBook(
+            @ApiParam(value = "Идентификатор пользователя")
+            @RequestHeader("userId") String userId,
+            @ApiParam(value = "Данные для новой книги (Название, автор, количество страниц, жанры)")
+            @RequestBody Book book) {
+        var result = service.createBook(userId, book);
+        return ResponseEntity.ok(result);
+    }
 
   @GetMapping(BOOKS_PATH + "/{bookId}")
   @ApiOperation(value = "Получение книги с указанным идентификатором")
