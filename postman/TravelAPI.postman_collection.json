@@ -1,0 +1,167 @@
+{
+	"info": {
+		"_postman_id": "e3255a63-4231-4732-bdd6-c8bd51508999",
+		"name": "TravelAPI",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GetTravel",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "userId",
+						"value": "UserA",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8081/api/v001/travels/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"v001",
+						"travels",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetTravels",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "userId",
+						"value": "UserA",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8081/api/v001/travels",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"v001",
+						"travels"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeleteTravel",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "userId",
+						"value": "UserA",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8081/api/v001/travels/34",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"v001",
+						"travels",
+						"34"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PostTravel",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "userId",
+						"type": "text",
+						"value": "UserA"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\": \"Чебуреки повсюду\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8081/api/v001/travels",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"v001",
+						"travels"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PatchTravel",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "userId",
+						"type": "text",
+						"value": "UserA"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"id\": \"33\", \n\t\"name\": \"Снова чебурек\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8081/api/v001/travels/33",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"v001",
+						"travels",
+						"33"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

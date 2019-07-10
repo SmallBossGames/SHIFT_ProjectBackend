@@ -1,0 +1,86 @@
+{
+	"info": {
+		"_postman_id": "fd510ae8-39ab-4b0e-a64e-df4b6d2d7767",
+		"name": "TransferAPI",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GetTransfer",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "userId",
+						"type": "text",
+						"value": "UserA"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8081/api/v001/transfers/5",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"v001",
+						"transfers",
+						"5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetTransfers",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "userId",
+						"type": "text",
+						"value": "UserA"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8081/api/v001/transfers",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"v001",
+						"transfers"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "cdbe9b83-c5e8-48f3-9df4-bbaa56449cdf",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "bde8f655-62b5-4bca-807f-969d3a97569e",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}

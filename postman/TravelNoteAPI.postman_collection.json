@@ -1,0 +1,202 @@
+{
+	"info": {
+		"_postman_id": "11cffb5f-a39d-482c-97d8-da7bf0569b55",
+		"name": "TravelNoteAPI",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GetTravelNote",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "userId",
+						"value": "UserA",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8081/api/v001/notes/travels/2?travelId=33",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"v001",
+						"notes",
+						"travels",
+						"2"
+					],
+					"query": [
+						{
+							"key": "travelId",
+							"value": "33"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetTravelNotes",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "userId",
+						"value": "UserA",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8081/api/v001/notes/travels?travelId=33",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"v001",
+						"notes",
+						"travels"
+					],
+					"query": [
+						{
+							"key": "travelId",
+							"value": "33"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeleteTravelNote",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "userId",
+						"value": "UserA",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8081/api/v001/notes/travels/5?travelId=\"iwfeufweiuwefui\"",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"v001",
+						"notes",
+						"travels",
+						"5"
+					],
+					"query": [
+						{
+							"key": "travelId",
+							"value": "\"iwfeufweiuwefui\""
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PostTravelNote",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "userId",
+						"type": "text",
+						"value": "UserA"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\": \"trrtrtfewpk\",\n    \"text\": \"jtyjtofewjefwjewf\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8081/api/v001/notes/travels?travelId=33",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"v001",
+						"notes",
+						"travels"
+					],
+					"query": [
+						{
+							"key": "travelId",
+							"value": "33"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PatchTravelNote",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "userId",
+						"type": "text",
+						"value": "UserA"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": \"jtjjtejifwe\",\n    \"title\": \"trrtrtfewpk\",\n    \"text\": \"jtyjtofewjefwjewf\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8081/api/v001/notes/travels/5?travelId=\"weffwewefewf\"",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"v001",
+						"notes",
+						"travels",
+						"5"
+					],
+					"query": [
+						{
+							"key": "travelId",
+							"value": "\"weffwewefewf\""
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

@@ -1,0 +1,197 @@
+{
+	"info": {
+		"_postman_id": "2136f6ab-01cf-4752-b0a2-7272cab1d93f",
+		"name": "MoveAPI",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GetMove",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "userId",
+						"type": "text",
+						"value": "UserA"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8081/api/v001/moves/2?travelId=\"fwfeewffewef\"",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"v001",
+						"moves",
+						"2"
+					],
+					"query": [
+						{
+							"key": "travelId",
+							"value": "\"fwfeewffewef\""
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetMoves",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "userId",
+						"value": "UserA",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8081/api/v001/moves?travelId=\"gergwergrwew\"",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"v001",
+						"moves"
+					],
+					"query": [
+						{
+							"key": "travelId",
+							"value": "\"gergwergrwew\""
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeleteMove",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "userId",
+						"type": "text",
+						"value": "UserA"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8081/api/v001/moves/5?travelId=\"iwfeufweiuwefui\"",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"v001",
+						"moves",
+						"5"
+					],
+					"query": [
+						{
+							"key": "travelId",
+							"value": "\"iwfeufweiuwefui\""
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PostMove",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "userId",
+						"type": "text",
+						"value": "UserA"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": \"kkkokok\",\n\t\"travelId\": \"fwieoiqwfo\",\n    \"fromPlace\": \"from\",\n\t\"fromDate\": 1562387906992,\n    \"toPlace\": \"to\",\n\t\"toDate\": 1562387906992,\n\t\"distance\": 45,\n    \"transferId\": 1,\n    \"money\": 34\n\t\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8081/api/v001/moves?travelId=\"fwefweiew\"",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"v001",
+						"moves"
+					],
+					"query": [
+						{
+							"key": "travelId",
+							"value": "\"fwefweiew\""
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PatchMove",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "userId",
+						"type": "text",
+						"value": "UserA"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": \"kkkokok\",\n\t\"travelId\": \"fwieoiqwfo\",\n    \"fromPlace\": \"from\",\n\t\"fromDate\": 1562387906992,\n    \"toPlace\": \"to\",\n\t\"toDate\": 1562387906992,\n\t\"distance\": 45,\n    \"transferId\": 1,\n    \"money\": 34\n\t\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8081/api/v001/moves/5?travelId=\"weffwewefewf\"",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"v001",
+						"moves",
+						"5"
+					],
+					"query": [
+						{
+							"key": "travelId",
+							"value": "\"weffwewefewf\""
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

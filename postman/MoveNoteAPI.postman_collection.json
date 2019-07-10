@@ -1,0 +1,202 @@
+{
+	"info": {
+		"_postman_id": "86506c43-804b-442d-9988-8cb8729bb3e4",
+		"name": "MoveNoteAPI",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GetMoveNote",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "userId",
+						"type": "text",
+						"value": "UserA"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8081/api/v001/notes/moves/2?moveId=\"fwfeewffewef\"",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"v001",
+						"notes",
+						"moves",
+						"2"
+					],
+					"query": [
+						{
+							"key": "moveId",
+							"value": "\"fwfeewffewef\""
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetMoveNotes",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "userId",
+						"value": "UserA",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8081/api/v001/notes/moves?moveId=\"fwfeewffewef\"",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"v001",
+						"notes",
+						"moves"
+					],
+					"query": [
+						{
+							"key": "moveId",
+							"value": "\"fwfeewffewef\""
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeleteMoveNote",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "userId",
+						"type": "text",
+						"value": "UserA"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8081/api/v001/notes/moves/2?moveId=\"fwfeewffewef\"",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"v001",
+						"notes",
+						"moves",
+						"2"
+					],
+					"query": [
+						{
+							"key": "moveId",
+							"value": "\"fwfeewffewef\""
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PostMoveNote",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "userId",
+						"type": "text",
+						"value": "UserA"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": \"wfwssdf\",\n    \"title\": \"fewqf\",\n    \"text\": \"wgegewepwrgkperkgrpwekprg\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8081/api/v001/notes/moves?moveId=\"fwfeewffewef\"",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"v001",
+						"notes",
+						"moves"
+					],
+					"query": [
+						{
+							"key": "moveId",
+							"value": "\"fwfeewffewef\""
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PatchMoveNote",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "userId",
+						"type": "text",
+						"value": "UserA"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": \"wfwefwwf\",\n    \"title\": \"fewqf\",\n    \"text\": \"wgegewepwrgkperkgrpwekprg\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8081/api/v001/notes/moves/2?moveId=\"fwfeewffewef\"",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"v001",
+						"notes",
+						"moves",
+						"2"
+					],
+					"query": [
+						{
+							"key": "moveId",
+							"value": "\"fwfeewffewef\""
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
