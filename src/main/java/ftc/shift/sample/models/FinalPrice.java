@@ -1,9 +1,13 @@
 package ftc.shift.sample.models;
 
+import io.swagger.annotations.ApiModelProperty;
+
 import java.math.BigDecimal;
 
 public class FinalPrice {
+    @ApiModelProperty(value = "Идетификатор путешествия", required = true)
     String id;
+    @ApiModelProperty(value = "Итоговая стоимость поездки", required = true)
     BigDecimal price;
 
     public FinalPrice(){}

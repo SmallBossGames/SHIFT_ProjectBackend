@@ -50,10 +50,9 @@ public class DatabaseTravelNoteRepository implements TravelNoteRepository {
 
     @Override
     public Collection<TravelNote> getAllTravelNotes(String userId, String travelId) {
-        var sql = "SELECT TRAVEL_NOTES.ID, TRAVEL_NOTES.TITLE, TRAVEL_NOTES.TEXT  \n" +
-                "FROM TRAVEL_NOTES, TRAVELS \n" +
-                "WHERE TRAVELS.ID = :travelId\n" +
-                "AND TRAVELS.USER_ID = :userId";
+        var sql = "SELECT ID, TITLE, TEXT  \n" +
+                "FROM TRAVEL_NOTES \n" +
+                "WHERE TRAVEL_ID = :travelId\n";
         var params = new MapSqlParameterSource()
                 .addValue("userId", userId)
                 .addValue("travelId", travelId);

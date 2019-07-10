@@ -1,15 +1,23 @@
 package ftc.shift.sample.models;
 
+import io.swagger.annotations.ApiModelProperty;
+
 import java.math.BigDecimal;
 import java.util.Collection;
 import java.util.Date;
 
 public class Move {
+    @ApiModelProperty(value = "Идетификатор перемещения", required = true)
     private String id;
+    @ApiModelProperty(value = "Идетификатор вида транспорта", required = true)
     private int transferId;
+    @ApiModelProperty(value = "Место начала поездки", required = true)
     private String fromPlace;
+    @ApiModelProperty(value = "Дата начала поездки", required = true)
     private Date fromDate;
+    @ApiModelProperty(value = "Место конца поездки", required = true)
     private String toPlace;
+    @ApiModelProperty(value = "Дата конца поездки", required = true)
     private Date toDate;
     private double distance;
     private BigDecimal money;
